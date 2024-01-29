@@ -10,34 +10,42 @@ body {
   font-weight: 300;
 }
 
-/* header */
+main {
+  width: 100%;
+}
 
 header {
-  background-color: aliceblue;
-  width: 33vw;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  margin-left: 2rem;
+  background-color: rgb(243, 232, 243);
+  height: 15vh;
   position: sticky;
-  z-index: 2;
   top: 0vh;
+  z-index: 2;
+  display: flex;
+  width: 50%;
 }
+
+/* .site-width {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+} */
 
 .header-content {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  padding: 0 1rem;
 }
 
 .site-logo {
-  font-family: "Sacramento", cursive;
-  font-size: 1.4rem;
-  font-weight: 600;
-  padding: 2rem 0 1rem 0;
+  display: none;
 }
 
 .nav-menu {
-  margin-bottom: 1rem;
+  /* padding-top: 10px; */
+  /* text-align: center; */
+  align-self: center;
 }
 
 .nav-menu ul {
@@ -45,12 +53,14 @@ header {
 }
 
 .nav-items li {
-  margin-top: 1rem;
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
 }
 
 .nav-items a {
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 0.95rem;
   color: rgb(63, 59, 61);
 }
 
@@ -63,23 +73,40 @@ header {
   font-weight: 400;
 }
 
-/* hero */
+/* .card {
+  height: 90vh;
+  box-shadow: 5px 4px 28px -3px rgba(0, 0, 0, 0.4);
+} */
 
 .hero {
-  margin: 1rem;
+  background-color: rgb(233, 228, 233);
+  display: flex;
+  justify-content: space-around;
+}
+
+.hero-image {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.hero-text {
+  /* padding-left: 2rem; */
+  /* padding: 2rem 0 0 2rem; */
+  display: flex;
+  flex-direction: column;
+  margin-right: 4rem;
 }
 
 .hero-heading {
-  font-size: 4rem;
+  font-size: 10rem;
   /* font-weight: 400; */
   /* text-transform: uppercase; */
-  /* margin-top: 10rem; */
+  margin-top: 10rem;
   text-align: center;
   font-family: "Sacramento", cursive;
 }
 
 .hero-sub-heading {
-  font-size: 3rem;
+  font-size: 6.6rem;
   font-weight: 300;
   text-align: center;
   margin-top: 0.8rem;
@@ -118,12 +145,70 @@ header {
   margin-top: 4rem;
 }
 
+#ontdek-meer {
+  margin-top: 3rem;
+  background-color: aliceblue;
+  display: flex;
+}
+
+.ontdek-meer-content {
+  padding: 1rem 4rem 0 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 2rem;
+}
+
+.card p {
+  font-size: 1.05rem;
+  font-weight: 300;
+  margin: 1rem 0 2rem 0;
+  line-height: 1.5;
+}
+
+#uitgangspunt {
+  /* margin-top: 3rem; */
+}
+
+#uitdrukken {
+  /* margin-top: 3rem;
+  display: flex; */
+}
+
+.piano {
+  width: 80%;
+}
+
+.playing-piano {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  opacity: 0.25;
+  width: 25vw;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .site-logo {
+    display: block;
+    font-family: "Sacramento", cursive;
+    font-size: 1.4rem;
+    align-self: center;
+    font-weight: 600;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    padding: 0 1rem;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
