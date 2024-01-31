@@ -8,6 +8,7 @@ body {
   font-family: "Montserrat", sans-serif;
   color: rgb(63, 59, 61);
   font-weight: 300;
+  background-color: rgb(233, 228, 233);
 }
 
 /* header */
@@ -63,14 +64,36 @@ header {
   font-weight: 400;
 }
 
+.wrapper {
+  height: 100vh;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 /* hero */
 
 .hero {
-  margin: 1rem;
+  background-image: linear-gradient(
+      to bottom,
+      rgb(233, 228, 233) 40%,
+      rgb(233, 228, 233) 41%,
+      rgba(233, 228, 233, 0) 80%,
+      rgba(233, 228, 233, 0)
+    ),
+    url("img/jordan-whitfield-eAYO8vKNeFQ-unsplash.jpg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10rem;
 }
 
 .hero-heading {
-  font-size: 4rem;
+  font-size: 5rem;
   /* font-weight: 400; */
   /* text-transform: uppercase; */
   /* margin-top: 10rem; */
@@ -79,10 +102,10 @@ header {
 }
 
 .hero-sub-heading {
-  font-size: 3rem;
+  font-size: 3.4rem;
   font-weight: 300;
   text-align: center;
-  margin-top: 0.8rem;
+  margin-top: 0.5rem;
 }
 
 .hero-action {
@@ -112,18 +135,51 @@ header {
 }
 
 .hero-quote {
-  font-size: 1.9rem;
-  font-weight: 200;
+  font-size: 1.2rem;
+  font-weight: 400;
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 355px) {
+
+    .hero-heading {
+  font-size: 4rem;
+
+}
+
+.hero-sub-heading {
+  font-size: 2.6rem;
+
+}
+
+.hero-quote {
+  font-size: 1rem;
+
+}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .hero {
+    background-position: center;
+
+  }
+
+  .hero-heading {
+  font-size: 9rem;
+
+}
+
+.hero-sub-heading {
+  font-size: 6rem;
+
+}
+
+.hero-quote {
+  font-size: 1.7rem;
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -136,4 +192,14 @@ header {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+
+  .hero {
+    background-size: 70%;
+    
+  }
+
+  wrapper {
+    /* margin-left: 10%;
+    margin-right: 10%; */
+  }
 }
